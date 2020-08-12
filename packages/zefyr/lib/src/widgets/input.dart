@@ -15,7 +15,6 @@ class InputConnectionController implements TextInputClient {
   //
   // public members
   //
-
   final RemoteValueChanged onValueChanged;
 
   /// Returns `true` if there is open input connection.
@@ -168,4 +167,20 @@ class InputConnectionController implements TextInputClient {
   void updateFloatingCursor(RawFloatingCursorPoint point) {
     // TODO: implement updateFloatingCursor
   }
+
+  @override
+  TextEditingValue get currentTextEditingValue =>
+      _lastKnownRemoteTextEditingValue;
+
+  AutofillScope get currentAutofillScope => null;
+
+  @override
+  void showAutocorrectionPromptRect(int start, int end) {
+    // TODO: implement showAutocorrectionPromptRect
+  }
+  
+  @override
+  void connectionClosed(){ }
+  
+
 }
