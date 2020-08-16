@@ -90,6 +90,11 @@ class InputConnectionController implements TextInputClient {
   //
   // Overridden members
   //
+  @override
+  void performPrivateCommand(String action, Map<String, dynamic> data){
+    // no-op
+  }
+
 
   @override
   void performAction(TextInputAction action) {
@@ -178,9 +183,9 @@ class InputConnectionController implements TextInputClient {
   void showAutocorrectionPromptRect(int start, int end) {
     // TODO: implement showAutocorrectionPromptRect
   }
-  
+
   @override
   void connectionClosed(){ }
-  
+
 
 }
